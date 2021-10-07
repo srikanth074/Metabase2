@@ -15,7 +15,7 @@ import Text from "metabase/components/type/Text";
 import ModalWithTrigger from "metabase/components/ModalWithTrigger";
 import RecipientPicker from "metabase/pulse/components/RecipientPicker";
 import SchedulePicker from "metabase/components/SchedulePicker";
-import SendTestPulse from "metabase/components/SendTestPulse";
+import SendTestPulse from "metabase/sharing/components/SendTestPulse";
 import Sidebar from "metabase/dashboard/components/Sidebar";
 import Toggle from "metabase/components/Toggle";
 import Select, { Option } from "metabase/components/Select";
