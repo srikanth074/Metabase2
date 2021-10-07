@@ -10,7 +10,7 @@ describe("SendTestPulse", () => {
   const failedText = "Sending failed";
 
   it("should display a success message when sending the pulse succeeds", () => {
-    const testPulse = jest.fn().mockResolvedValue()
+    const testPulse = jest.fn().mockResolvedValue();
 
     render(
       <SendTestPulse
@@ -28,10 +28,10 @@ describe("SendTestPulse", () => {
     waitFor(() => {
       screen.getByText(successText);
     });
-  })
+  });
 
   it("should display a server error message when sending the pulse fails", () => {
-    const errorResponse = { data: { message: "Server error" }};
+    const errorResponse = { data: { message: "Server error" } };
     const testPulse = jest.fn().mockRejectedValue(errorResponse);
 
     render(
