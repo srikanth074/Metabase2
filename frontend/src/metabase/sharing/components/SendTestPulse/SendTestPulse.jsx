@@ -6,17 +6,17 @@ import { getErrorMessage } from "metabase/components/form/FormMessage";
 import { ErrorMessage } from "./SendTestPulse.styled";
 
 const propTypes = {
-  channel: PropTypes.object.isRequired,
   pulse: PropTypes.object.isRequired,
+  channel: PropTypes.object.isRequired,
   testPulse: PropTypes.func.isRequired,
-  disabled: PropTypes.bool.isRequired,
   normalText: PropTypes.string.isRequired,
   successText: PropTypes.string.isRequired,
+  disabled: PropTypes.bool.isRequired,
 };
 
 const SendTestPulse = ({
-  channel,
   pulse,
+  channel,
   testPulse,
   disabled,
   normalText,
