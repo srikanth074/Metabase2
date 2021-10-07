@@ -2,7 +2,8 @@ import React, { useCallback, useState } from "react";
 import PropTypes from "prop-types";
 import { t } from "ttag";
 import ActionButton from "metabase/components/ActionButton";
-import FormMessage from "metabase/components/form/FormMessage";
+import { getErrorMessage } from "metabase/components/form/FormMessage";
+import { ErrorMessage } from "./SendTestPulse.styled";
 
 const propTypes = {
   channel: PropTypes.object.isRequired,
@@ -43,9 +44,7 @@ const SendTestPulse = ({
         successText={successText}
         forceActiveStyle={true}
       />
-      {error && (
-        <FormMessage formError={error} />
-      )}
+      {error && <ErrorMessage>{getErrorMessage(error)}</ErrorMessage>}
     </div>
   );
 };
